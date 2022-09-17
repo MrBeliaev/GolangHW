@@ -31,7 +31,6 @@ func Top10(str string) []string {
 		}
 		sort.Strings(arr)
 		result = append(result, arr...)
-		arr = nil
 	}
 	if len(result) >= 10 {
 		return result[:10]
