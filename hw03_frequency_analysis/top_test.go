@@ -93,4 +93,19 @@ func TestTop10(t *testing.T) {
 		}
 		require.Equal(t, expected, Top10(smallText))
 	})
+	t.Run("sort words", func(t *testing.T) {
+		expected := []string{
+			"a", // 1
+			"b", // 1
+			"c", // 1
+			"d", // 1
+			"e", // 1
+			"f", // 1
+			"g", // 1
+			"h", // 1
+			"i", // 1
+			"j", // 1
+		}
+		require.Equal(t, expected, Top10("c j a b i h d f e g"))
+	})
 }
